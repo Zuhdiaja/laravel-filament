@@ -55,3 +55,42 @@ TI - 2F
 ![alt text](imgjobsheet2/crud12.png)
 
 -----------------------------------------------
+
+## JOBSHEET Migrasi dan Model
+
+## langkah-langkah
+
+1. generate model categories<br>
+![alt text](imgjobsheet3/model1.png)
+
+2. generate table categories<br>
+![alt text](imgjobsheet3/migrate1.png)
+
+3. generate model post<br>
+![alt text](imgjobsheet3/model2.png)
+
+4. desain structure table post<br>
+![alt text](imgjobsheet3/migrate2.png)
+
+5. mengatur model post<br>
+![alt text](imgjobsheet3/model3.png)
+
+6. make resource category in filament<br>
+![alt text](imgjobsheet3/model4.png)
+![alt text](imgjobsheet3/model5.png)
+
+7. edit form category<br>
+![alt text](imgjobsheet3/editCate.png)
+
+8. edit table category<br>
+![alt text](imgjobsheet3/edittbleCat.png)
+
+9. add 3 category<br>
+![alt text](imgjobsheet3/addcate.png)
+
+10. add validate slug unique<br>
+![alt text](imgjobsheet3/valislug1.png)
+![alt text](imgjobsheet3/valislug2.png)
+
+11. change category_id to foreign key<br>
+![alt text](imgjobsheet3/fkcatid.png)
