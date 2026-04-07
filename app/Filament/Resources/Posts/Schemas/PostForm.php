@@ -12,7 +12,10 @@ use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\ColorPicker;
 use Filament\Schemas\Schema;
+use Illuminate\Contracts\Support\ValidatedData;
 use Illuminate\Support\Str;
+use Illuminate\Validation\Rules\Unique;
+use Illuminate\Validation\ValidationData;
 
 class PostForm
 {
@@ -21,7 +24,7 @@ class PostForm
         return $schema
             ->components([
                 TextInput::make('title')
-                    ->required()
+                    ->rules('required | min:3 | max:10')
                     ->live(onBlur: true)
                     ->afterStateUpdated(function ($get, $set, ?string $old, ?string $state) {
                         if (($get('slug') ?? '') !== Str::slug($old)) {
@@ -30,8 +33,9 @@ class PostForm
                         $set('slug', Str::slug($state));
                     }),
                 TextInput::make('slug')
-                    ->required()
-                    ->unique(ignoreRecord: true),
+                    ->rules('required')
+                    ->unique()
+                    ->validationMessages(['unique' => 'slug harus unik tidak boleh sama']),
                 Select::make('category_id')
                     ->relationship('category', 'name')
                     ->searchable()
