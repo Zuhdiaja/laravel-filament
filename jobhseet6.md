@@ -21,6 +21,28 @@ tampil table ![alt text](imgjobsheet6-1/post4.png)
 
 ------------------------------------------------------
 
-## JOBSHEET  Membuat CRUD Resource
+## JOBSHEET Membuat CRUD Resource
 
 ## langkah-langkah
+
+1. membuat resource user <br>
+![alt text](imgjobsheet6-2/crud1.png)
+
+2. tampilan <br>
+![alt text](imgjobsheet6-2/crud2.png)
+
+3. form input <br>
+![alt text](imgjobsheet6-2/crud3.png)
+![alt text](imgjobsheet6-2/crud4.png)
+
+4. view input <br>
+![alt text](imgjobsheet6-2/crud5.png)
+![alt text](imgjobsheet6-2/crud6.png)
+
+------------------------------------------------------
+
+## JOBSHEET Implementasi Form Validation
+
+## langkah-langkah
+
+1. 

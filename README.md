@@ -94,3 +94,5 @@ TI - 2F
 
 11. change category_id to foreign key<br>
 ![alt text](imgjobsheet3/fkcatid.png)
+
+## JOBSHEET 6 = https://github.com/Zuhdiaja/laravel-filament/blob/main/jobhseet6.md

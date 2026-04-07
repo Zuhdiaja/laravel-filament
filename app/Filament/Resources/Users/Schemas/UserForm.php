@@ -2,8 +2,8 @@
 
 namespace App\Filament\Resources\Users\Schemas;
 
-use Filament\Schemas\Schema;
 use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Schema;
 
 class UserForm
 {
@@ -18,12 +18,10 @@ class UserForm
                 TextInput::make('email')
                     ->email()
                     ->required()
-                    ->unique(ignoreRecord: true)
-                    ->maxLength(255),
+                    ->unique(ignoreRecord: true),
                 TextInput::make('password')
                     ->password()
-                    ->minLength(6)
-                    ->required()
+                    ->required(),
             ]);
     }
 }
