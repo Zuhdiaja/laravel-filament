@@ -68,3 +68,24 @@ TI - 2F
 5. Menampilkan Tanggal dengan Format<br>
 ![alt text](imgjobsheet7-2/lisr9.png)
 ![alt text](imgjobsheet7-2/list10.png)
+
+
+## JOBSHEET – – Implementasi Tabs pada Info List di Filament
+
+## langkah-langkah
+
+1. Mengubah Section Menjadi Tabs <br>
+![alt text](imgjobsheet7-3/tabs1.png)
+![alt text](imgjobsheet7-3/tabs2.png)
+
+2. Tab Pricing & Stock<br>
+![alt text](imgjobsheet7-3/tabs3.png)
+![alt text](imgjobsheet7-3/tabs4.png)
+
+3. Tab Media & Status<br>
+![alt text](imgjobsheet7-3/tabs5.png)
+![alt text](imgjobsheet7-3/tabs6.png)
+
+4. Mengubah Tabs Menjadi Vertical<br>
+![alt text](imgjobsheet7-3/tabs7.png)
+![alt text](imgjobsheet7-3/tabs8.png)
