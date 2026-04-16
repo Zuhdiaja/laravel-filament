@@ -43,3 +43,28 @@ TI - 2F
 
 10. menampilkan data pada table<br>
 ![alt text](imgjobsheet7-1/multi17.png)
+
+
+## JOBSHEET – – Implementasi Info List (View Page) di Filament
+
+## langkah-langkah
+
+1. Mengedit Product Info List <br>
+![alt text](imgjobsheet7-2/list1.png)
+![alt text](imgjobsheet7-2/list2.png)
+
+2. Section – Pricing & Stock<br>
+![alt text](imgjobsheet7-2/list3.png)
+![alt text](imgjobsheet7-2/list4.png)
+
+3. Section – Media & Status<br>
+![alt text](imgjobsheet7-2/list5.png)
+![alt text](imgjobsheet7-2/list6.png)
+
+4. Menampilkan Status Boolean<br>
+![alt text](imgjobsheet7-2/list7.png)
+![alt text](imgjobsheet7-2/list8.png)
+
+5. Menampilkan Tanggal dengan Format<br>
+![alt text](imgjobsheet7-2/lisr9.png)
+![alt text](imgjobsheet7-2/list10.png)
