@@ -17,9 +17,9 @@ class PostsTable
         return $table
             ->columns([
                 TextColumn::make('title')
-                    ->searchable(),
+                    ->sortable(),
                 TextColumn::make('slug')
-                    ->searchable(),
+                    ->sortable(),
                 TextColumn::make('category_id')
                     ->numeric()
                     ->sortable(),
@@ -39,7 +39,7 @@ class PostsTable
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-            ])
+            ])-> defaultSort('created_at', 'asc')
             ->filters([
                 //
             ])
