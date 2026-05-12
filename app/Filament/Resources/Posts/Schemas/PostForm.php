@@ -24,7 +24,9 @@ class PostForm
         return $schema
             ->components([
                 TextInput::make('title')
-                    ->rules('required | min:3 | max:10')
+                    ->required()
+                    ->minLength(3)
+                    ->maxLength(10)
                     ->live(onBlur: true)
                     ->afterStateUpdated(function ($get, $set, ?string $old, ?string $state) {
                         if (($get('slug') ?? '') !== Str::slug($old)) {
@@ -33,8 +35,8 @@ class PostForm
                         $set('slug', Str::slug($state));
                     }),
                 TextInput::make('slug')
-                    ->rules('required')
-                    ->unique()
+                    ->required()
+                    ->unique(ignoreRecord: true)
                     ->validationMessages(['unique' => 'slug harus unik tidak boleh sama']),
                 Select::make('category_id')
                     ->relationship('category', 'name')
