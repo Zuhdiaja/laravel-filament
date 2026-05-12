@@ -19,35 +19,52 @@ class PostsTable
     {
         return $table
             ->columns([
+                TextColumn::make('id')
+                    ->label('ID')
+                    ->sortable()
+                    ->toggleable(),
                 TextColumn::make('title')
                     ->sortable()
-                    ->searchable(),
+                    ->searchable()
+                    ->toggleable(),
                 TextColumn::make('slug')
                     ->sortable()
-                    ->searchable(),
+                    ->searchable()
+                    ->toggleable(),
                 TextColumn::make('category_id')
                     ->numeric()
                     ->sortable()
-                    ->searchable(),
+                    ->searchable()
+                    ->toggleable(),
                 TextColumn::make('color')
-                    ->searchable(),
-                ImageColumn::make('image'),
+                    ->searchable()
+                    ->toggleable(),
+                ImageColumn::make('image')
+                    ->toggleable(),
                 IconColumn::make('published')
-                    ->boolean(),
+                    ->boolean()
+                    ->toggleable(),
                 TextColumn::make('published_at')
                     ->dateTime()
-                    ->sortable(),
+                    ->sortable()
+                    ->toggleable(),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('tags')
+                    ->label('Tags')
                     ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-            ])-> defaultSort('created_at', 'asc')
+                IconColumn::make('is_featured')
+                    ->boolean()
+                    ->toggleable(),
+            ]) ->defaultSort('created_at', 'asc')
             ->filters([
-                filter::make('created_at')
+                Filter::make('created_at')
                     ->label('Creation Date')
                     ->schema([
                         DatePicker::make('created_at')
@@ -60,7 +77,7 @@ class PostsTable
                             fn ($query, $date) => $query->whereDate('created_at', '>=', $date)
                         );
                     }),
-                    selectFilter::make('category_id')
+                SelectFilter::make('category_id')
                     ->relationship('category', 'name')
                     ->label('Category')
                     ->preload(),
