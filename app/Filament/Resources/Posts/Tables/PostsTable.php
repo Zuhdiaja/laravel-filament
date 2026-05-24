@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Posts\Tables;
 
+use App\Models\Category;
 use Filament\Actions\Action;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteAction;
@@ -32,6 +33,10 @@ class PostsTable
                     ->searchable()
                     ->toggleable(),
                 TextColumn::make('slug')
+                    ->sortable()
+                    ->searchable()
+                    ->toggleable(),
+                Textcolumn::make('category.name')
                     ->sortable()
                     ->searchable()
                     ->toggleable(),
@@ -83,6 +88,8 @@ class PostsTable
                     }),
                 SelectFilter::make('category_id')
                     ->relationship('category', 'name')
+                    ->options(Category::all()->pluck('name', 'id'))
+                    // -> preloed()
                     ->label('Category')
                     ->preload(),
             ])
